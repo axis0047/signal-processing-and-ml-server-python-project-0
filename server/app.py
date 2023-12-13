@@ -9,6 +9,8 @@ import math
 ws_server_url = 'http://155.65.100.1'
 headers = {'Content-Type': 'application/json'}
 
+client_id = 2
+
 def udp_server():
     # Create a UDP socket
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -36,8 +38,7 @@ def udp_server():
             if(decision_digit < 8):
                 
                 data = {
-                        'client_id':2,
-                        'desicion':decision_digit
+                        client_id:decision_digit
                         }
                 
                 count = 0
